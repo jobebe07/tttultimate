@@ -1,3 +1,5 @@
+import Items from "./Items.js";
+
 export default class TicTacToeField {
     constructor(gridMain) {
         let gridMain = document.getElementsByClassName("grid-main")[0]
@@ -38,5 +40,50 @@ export default class TicTacToeField {
         }
 
         console.log(this.grid)
+
+        for(let i = 0; i < 2; i++) {
+            for(let a = 0; a < 2; a++) {
+                for(let b = 0; b < 2; b++) {
+                    for(let c = 0; c < 2; c++) {
+                        this.field[i][a][b][c] = 0
+                    }
+                }
+            }
+        }
+    }
+
+    lock(row, col) {
+        this.grid[row][col].container.classList.add("locked")
+    }
+    unlock() {
+        this.grid[row][col].container.classList.add("locked")
+    }
+    setItem(row, col, fieldrow, fieldcol, item) {
+        let image = this.grid[row][col].field[fieldrow][fieldcol]
+        this.field[row][col][fieldrow][fieldcol] = item
+        if(item == Items.CIRCLE) {
+            image.src = "./assets/game/circle.png"
+        } else if(item == Items.CROSS) {
+            image.src = "./assets/game/cross.png"
+        } else if(item == Items.DEFAULT) {
+            image.src = "./assets/game/empty.png"
+        }
+    }
+    updateGrid() {
+        for(let row = 0; row < 2; row++) {
+            for(let col = 0; col < 2; col++) {
+                for(let fieldrow = 0; fieldrow < 2; fieldrow++) {
+                    for(let fieldcol = 0; fieldcol < 2; fieldcol++) {
+                        let val = "./assets/game/empty.png"
+                        if(this.field[row][col][fieldrow][fieldcol] == Items.CIRCLE) {
+                            val = "./assets/game/circle.png"
+                        } else if (this.field[row][col][fieldrow][fieldcol] == Items.CROSS) {
+                            val = "./assets/game/cross.png"
+                        }
+                        this.grid[row][col].field[fieldrow][fieldcol].src = val
+                    }
+                }
+            }
+        }
     }
 }
