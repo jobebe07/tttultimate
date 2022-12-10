@@ -24,6 +24,10 @@ body {
 
 .grid-small {
     background-color: blueviolet;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 /* display big item when field is locked */
