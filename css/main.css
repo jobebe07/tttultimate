@@ -14,7 +14,8 @@ body {
 .grid-main {
     display: grid;
     gap: 10px;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .grid-item {
@@ -23,4 +24,18 @@ body {
 
 .grid-small {
     background-color: blueviolet;
+}
+
+/* display big item when field is locked */
+
+.field-item .grid-item-big {
+    display: none;
+}
+
+.field-locked.field-item .grid-item-big {
+    display: block;
+}
+
+.field-locked.field-item .grid-small {
+    display: none;
 }

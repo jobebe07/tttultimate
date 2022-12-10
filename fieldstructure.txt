@@ -1,0 +1,16 @@
+grid-main
+    - field-item
+        - grid-small
+            - grid-item
+                - the image
+            - grid-item
+                - the image
+            ...
+    - field-item
+        - grid-small
+            - grid-item
+                - the image
+            - grid-item
+                - the image
+            ...
+    ...
