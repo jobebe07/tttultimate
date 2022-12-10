@@ -10,6 +10,11 @@ export default class TicTacToeField {
         this.gridElem = gridMain;
 
         this.grid = [new Array(), new Array(), new Array()]
+        for(let i = 0; i < 2; i++) {
+            for(let a = 0; a < 2; a++) {
+                this.grid[i][a] = {container:undefined, field:undefined, winnerItem:undefined,}
+            }
+        }
         this.grids = [new Array(), new Array(), new Array()]
         let current = 0
         for(let elem of gridMain.children) {
