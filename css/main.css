@@ -18,10 +18,6 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-.grid-item {
-    border: 2px solid var(--c-primary);
-}
-
 .grid-small {
     display: grid;
     gap: 5px;
