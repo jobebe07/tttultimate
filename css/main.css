@@ -1,5 +1,3 @@
-@import "./colors.css";
-
 :root {
     --c-primary: #675cff;
 }
@@ -24,5 +22,5 @@ body {
 }
 
 .grid-small {
-
+    background-color: blueviolet;
 }

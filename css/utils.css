@@ -179,3 +179,85 @@
 .h-300 {
     height: 300px;
 }
+
+.w-10p {
+    width: 10%;
+}
+.w-20p {
+    width: 20%;
+}
+.w-30p {
+    width: 30%;
+}
+.w-40p {
+    width: 40%;
+}
+.w-50p {
+    width: 50%;
+}
+.w-60p {
+    width: 60%;
+}
+.w-70p {
+    width: 70%;
+}
+.w-80p {
+    width: 80%;
+}
+.w-90p {
+    width: 90%;
+}
+.w-100p {
+    width: 100%;
+}
+
+.h-10p {
+    height: 10%;
+}
+.h-20p {
+    height: 20%;
+}
+.h-30p {
+    height: 30%;
+}
+.h-40p {
+    height: 40%;
+}
+.h-50p {
+    height: 50%;
+}
+.h-60p {
+    height: 60%;
+}
+.h-70p {
+    height: 70%;
+}
+.h-80p {
+    height: 80%;
+}
+.h-90p {
+    height: 90%;
+}
+.h-100p {
+    height: 100%;
+}
+
+.sz-20 {
+    font-size: 20px;
+}
+
+.sz-40 {
+    font-size: 40px;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
