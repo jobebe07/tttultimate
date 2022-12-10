@@ -1,5 +1,6 @@
 :root {
     --c-primary: #675cff;
+    --c-secondary: #f6f5ff;
 }
 
 * {
@@ -23,6 +24,10 @@ body {
     gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-small .grid-item {
+    background-color: var(--c-secondary);
 }
 
 /* display big item when field is locked */
