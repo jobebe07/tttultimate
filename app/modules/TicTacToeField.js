@@ -9,8 +9,8 @@ export default class TicTacToeField {
 
         this.gridElem = gridMain;
 
-        this.grid = new Array()
-        this.grids = new Array()
+        this.grid = [new Array(), new Array(), new Array()]
+        this.grids = [new Array(), new Array(), new Array()]
         let current = 0
         for(let elem of gridMain.children) {
             // elem of gridmain --> fielditem[0] = gridsmall
@@ -21,7 +21,7 @@ export default class TicTacToeField {
             let row = (current % 3)
             let col = Math.floor(current / 3)
             
-            let currentItems = new Array()
+            let currentItems = [new Array(), new Array(), new Array()]
 
             this.grids[row][col] = currentGrid
             let gridCurrent = 0
@@ -41,9 +41,14 @@ export default class TicTacToeField {
 
         console.log(this.grid)
 
+        this.field = new Array()
+
         for(let i = 0; i < 2; i++) {
+            this.field[i] = new Array()
             for(let a = 0; a < 2; a++) {
+                this.field[a] = new Array()
                 for(let b = 0; b < 2; b++) {
+                    this.field[b] = new Array()
                     for(let c = 0; c < 2; c++) {
                         this.field[i][a][b][c] = 0
                     }
