@@ -41,7 +41,7 @@ export default class TicTacToeField {
             this.grid[row][col].field = currentItems
             this.grid[row][col].winnerItem = currentWinnerItem
 
-            currrent++
+            current++
         }
 
         console.log(this.grid)
