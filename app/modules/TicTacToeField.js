@@ -2,7 +2,7 @@ import Items from "./Items.js";
 
 export default class TicTacToeField {
     constructor(gridMain) {
-        let gridMain = document.getElementsByClassName("grid-main")[0]
+        gridMain = document.getElementsByClassName("grid-main")[0]
         if(!gridMain.classList.contains("grid-main")) {
             this.valid = false
         }
