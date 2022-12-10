@@ -25,7 +25,7 @@ export default class TicTacToeField {
 
             this.grids[row][col] = currentGrid
             let gridCurrent = 0
-            for(let gridItem of currentGrid) {
+            for(let gridItem of currentGrid.children) {
                 let currentColumn = (gridCurrent % 3)
                 let currentRow = Math.floor(gridCurrent / 3)
                 currentItems[currentRow][currentColumn] = gridItem.children[0]
