@@ -1,0 +1,28 @@
+@import "./colors.css";
+
+:root {
+    --c-primary: #675cff;
+}
+
+* {
+    font-family: "Roboto";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-main {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    border: 2px solid var(--c-primary);
+}
+
+.grid-small {
+
+}
