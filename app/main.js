@@ -1,5 +1,9 @@
 import TicTacToeField from "./modules/TicTacToeField.js";
 
-let field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
+window.addEventListener("load", () => {
+    let field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
+    field.updateGrid()
+    window.field = field
+})
 
-window.field = field
+
