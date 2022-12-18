@@ -1,11 +1,10 @@
-@import "./colors.css";
-
 :root {
     --c-primary: #675cff;
+    --c-secondary: #f6f5ff;
 }
 
 * {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -15,14 +14,48 @@ body {
 
 .grid-main {
     display: grid;
-    gap: 10px;
-    grid-template-columns: auto auto auto;
-}
-
-.grid-item {
-    border: 2px solid var(--c-primary);
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .grid-small {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
 
+.grid-small .grid-item {
+    background-color: var(--c-secondary);
+}
+
+/* display big item when field is locked */
+
+.field-item .grid-item-big {
+    display: none;
+}
+
+.field-locked.field-item .grid-item-big {
+    display: block;
+}
+
+.field-locked.field-item .grid-small {
+    display: none;
+}
+
+.cross {
+    background-image: url("http://localhost/tttultimate/assets/game/cross.png");
+    background-size: 100%;
+
+}
+
+.circle {
+    background-image: url("http://localhost/tttultimate/assets/game/circle.png");
+    background-size: 100%;
+}
+
+.default {
+    background-image: url("http://localhost/tttultimate/assets/game/empty.png");
+    background-size: 100%;
 }

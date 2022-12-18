@@ -6,10 +6,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./app/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/colors.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/utils.css">
     <title>TicTacToe Ultimate</title>
 </head>
 <body>
-    
+    <div class="app flex-col-center">
+        <div class="p-20 w-70p">
+            <div class="flex-col w-100p">
+                <div class="flex-justify-center">
+                    <span class="sz-40">TicTacToe Ultimate</span>
+                </div>
+
+                <div class="flex-justify-center w-100p">
+                    <div class="grid-main" style="width:min-content">
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                        <div class="field-item">
+                            <div class="grid-small">
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                                <div class="grid-item w-40 h-40"></div>
+                            </div>
+                            <div class="grid-item-big"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
