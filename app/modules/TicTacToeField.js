@@ -44,13 +44,7 @@ export default class TicTacToeField {
                 let currentColumn = (gridCurrent % 3)
                 let currentRow = Math.floor(gridCurrent / 3)
 
-                if(gridItem.children[0] === undefined) {
-                    let image = document.createElement("img")
-                    image.classList.add("w-100p", "h-100p")
-                    gridItem.appendChild(image)
-                }
-
-                currentItems[currentRow][currentColumn] = gridItem.children[0]
+                currentItems[currentRow][currentColumn] = gridItem
                 gridCurrent++
             }
 
@@ -89,44 +83,34 @@ export default class TicTacToeField {
     setLockItem(row, col, item) {
         let container = this.grid[row][col].container
         let imageContainer = container.children[1]
-        let image = imageContainer.children[0]
-
-        let val = "./assets/game/empty.png"
-        if(image === undefined) {
-            image = document.createElement("img")
-            image.classList.add("w-100p", "h-100p")
-            imageContainer.appendChild(image)
-        }
         if(item === Items.CIRCLE) {
-            val = "./assets/game/circle.png"
+            imageContainer.classList.add("circle")
         } else if (item === Items.CROSS) {
-            val = "./assets/game/cross.png"
+            imageContainer.classList.add("cross")
         }
-        image.src = val
     }
-    /** Doesnt work */
+
     getLockItem(row, col) {
         let container = this.grid[row][col].container
         let imageContainer = container.children[1]
-        let image = imageContainer.children[0]
-        if(image.src == "./assets/game/circle.png") {
+        if(imageContainer.classList.contains("circle")) {
             return Items.CIRCLE
-        } else if (image.src == "./assets/game/cross.png") {
+        } else if (imageContainer.classList.contains("cross")) {
             return Items.CROSS
-        } else if (image.src == "./assets/game/empty.png") {
+        } else if (imageContainer.classList.contains("default")) {
             return Items.DEFAULT
         }
         return undefined
     }
     setItem(row, col, fieldrow, fieldcol, item) {
-        let image = this.grid[row][col].field[fieldrow][fieldcol]
+        let elem = this.grid[row][col].field[fieldrow][fieldcol]
         this.field[row][col][fieldrow][fieldcol] = item
         if(item === Items.CIRCLE) {
-            image.src = "./assets/game/circle.png"
+            elem.classList.add("circle")
         } else if(item === Items.CROSS) {
-            image.src = "./assets/game/cross.png"
+            elem.classList.add("cross")
         } else if(item === Items.DEFAULT) {
-            image.src = "./assets/game/empty.png"
+            elem.classList.add("default")
         }
         this.updateGrid()
     }
@@ -148,13 +132,15 @@ export default class TicTacToeField {
             for(let col = 0; col <= 2; col++) {
                 for(let fieldrow = 0; fieldrow <= 2; fieldrow++) {
                     for(let fieldcol = 0; fieldcol <= 2; fieldcol++) {
-                        let val = "./assets/game/empty.png"
+                        this.grid[row][col].field[fieldrow][fieldcol].classList.remove("circle", "default", "cross")
+
                         if(this.field[row][col][fieldrow][fieldcol] === Items.CIRCLE) {
-                            val = "./assets/game/circle.png"
+                            this.grid[row][col].field[fieldrow][fieldcol].classList.add("circle")
                         } else if (this.field[row][col][fieldrow][fieldcol] === Items.CROSS) {
-                            val = "./assets/game/cross.png"
+                            this.grid[row][col].field[fieldrow][fieldcol].classList.add("cross")
+                        } else if (this.field[row][col][fieldrow][fieldcol] === Items.DEFAULT) {
+                            this.grid[row][col].field[fieldrow][fieldcol].classList.add("default")
                         }
-                        this.grid[row][col].field[fieldrow][fieldcol].src = val
                     }
                 }
             }

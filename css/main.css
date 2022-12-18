@@ -43,3 +43,19 @@ body {
 .field-locked.field-item .grid-small {
     display: none;
 }
+
+.cross {
+    background-image: url("http://localhost/tttultimate/assets/game/cross.png");
+    background-size: 100%;
+
+}
+
+.circle {
+    background-image: url("http://localhost/tttultimate/assets/game/circle.png");
+    background-size: 100%;
+}
+
+.default {
+    background-image: url("http://localhost/tttultimate/assets/game/empty.png");
+    background-size: 100%;
+}
