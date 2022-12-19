@@ -146,4 +146,14 @@ export default class TicTacToeField {
             }
         }
     }
+
+    numToChords(num) {
+        let col = (num % 3)
+        let row = Math.floor(num / 3)
+        return {row:row, col:col,}
+    }
+
+    chordsToNum(row, col) {
+        return (row+1)*(col+1)
+    }
 }
