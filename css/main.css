@@ -34,6 +34,8 @@ body {
 
 .field-item .grid-item-big {
     display: none;
+    width: 100%;
+    height: 100%;
 }
 
 .field-locked.field-item .grid-item-big {

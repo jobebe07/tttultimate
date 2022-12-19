@@ -83,9 +83,11 @@ export default class TicTacToeField {
     setLockItem(row, col, item) {
         let container = this.grid[row][col].container
         let imageContainer = container.children[1]
-        if(item === Items.CIRCLE) {
+        if(item == Items.CIRCLE) {
             imageContainer.classList.add("circle")
-        } else if (item === Items.CROSS) {
+        } else if (item == Items.CROSS) {
+            imageContainer.classList.add("cross")
+        } else if(item == Items.DEFAULT) {
             imageContainer.classList.add("cross")
         }
     }
