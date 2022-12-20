@@ -165,8 +165,8 @@ export default class TicTacToeField {
         if(fieldItem) {
             let field = hasParent(fieldItem, ".field-item")
             if(fieldItem.hasAttribute("data-item-id") && field.hasAttribute("data-field-id")) {
-                itemId = fieldItem.getAttribute("data-item-id")
-                fieldId = field.getAttribute("data-field-id")
+                let itemId = fieldItem.getAttribute("data-item-id")
+                let fieldId = field.getAttribute("data-field-id")
 
                 return {fieldId:fieldId, itemId:itemId,}
             }
