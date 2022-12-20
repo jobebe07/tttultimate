@@ -34,8 +34,8 @@ export default class TicTacToeField {
             let currentGrid = elem.children[0]
             let currentWinnerItem = elem.children[1]
 
-            let row = (current % 3)
-            let col = Math.floor(current / 3)
+            let row = this.numToChords(current).row
+            let col = this.numToChords(current).col
             
             let currentItems = [[], [], []]
 
