@@ -40,10 +40,10 @@ export default class TicTacToeField {
             let currentItems = [[], [], []]
 
             this.grids[row][col] = currentGrid
-            let gridCurrent = 0
+            let gridCurrent = 1
             for(let gridItem of currentGrid.children) {
-                let currentColumn = (gridCurrent % 3)
-                let currentRow = Math.floor(gridCurrent / 3)
+                let currentColumn = this.numToChords(gridCurrent).col
+                let currentRow = this.numToChords(gridCurrent).row
 
                 currentItems[currentRow][currentColumn] = gridItem
                 gridCurrent++
