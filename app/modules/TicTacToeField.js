@@ -1,4 +1,5 @@
 import Items from "./Items.js";
+import hasParent from "./utils.js";
 
 export default class TicTacToeField {
     constructor(gridMain) {
@@ -157,5 +158,19 @@ export default class TicTacToeField {
 
     chordsToNum(row, col) {
         return (row+1)*(col+1)
+    }
+
+    getNumChords(item) {
+        let fieldItem = hasParent(item, ".grid-item")
+        if(fieldItem) {
+            let field = hasParent(fieldItem, ".field-item")
+            if(fieldItem.hasAttribute("data-item-id") && field.hasAttribute("data-field-id")) {
+                itemId = fieldItem.getAttribute("data-item-id")
+                fieldId = field.getAttribute("data-field-id")
+
+                return {fieldId:fieldId, itemId:itemId,}
+            }
+        }
+        return false
     }
 }
