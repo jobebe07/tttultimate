@@ -15,6 +15,6 @@ window.addEventListener("click", (e) => {
     if(result) {
         let gridChords = field.numToChords(result.fieldId)
         let itemChords = field.numToChords(result.itemId)
-        field.setItem(gridChords.row, gridChords.col, itemChords.row, itemChords.col, Items.CROSS)
+        field.setItem(gridChords.col, gridChords.row, itemChords.col, itemChords.row, Items.CROSS)
     }
 })
