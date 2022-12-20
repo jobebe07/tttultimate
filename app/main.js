@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 
 
 window.addEventListener("click", (e) => {
-    let result = field.getNumChors(e.target)
+    let result = field.getNumChords(e.target)
     if(result) {
         let gridChords = field.numToChords(result.fieldId)
         let itemChords = field.numToChords(result.itemId)
