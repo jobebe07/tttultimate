@@ -2,8 +2,6 @@ function hasParent(elem, exp) {
     let current = elem
 
     while(current != document.body) {
-        current = current.parentElement
-
         if (exp.startsWith('#')) {
             if(current.id == exp.substr(1)) return current
         } else if (exp.startsWith('.')) {
@@ -18,6 +16,8 @@ function hasParent(elem, exp) {
                 if(current.hasAttribute(string)) return current
             }
         }
+        
+        current = current.parentElement
     }
 
     return false
