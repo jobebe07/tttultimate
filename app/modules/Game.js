@@ -29,7 +29,6 @@ export default class Game {
             if(this.field.chordsToNum(gridChords.row, gridChords.col) != this.next && this.next != undefined && !this.field.isLocked(nextFieldChords.row, nextFieldChords.col)) {
                 return false
             }
-            
             this.field.setItem(gridChords.row, gridChords.col, itemChords.row, itemChords.col, this.current)
             this.next = this.field.chordsToNum(itemChords.row, itemChords.col)
 
