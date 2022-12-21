@@ -158,7 +158,7 @@ export default class TicTacToeField {
     }
 
     chordsToNum(row, col) {
-        return (row+1)*(col+1)
+        return ((row+1)*3) - (3-(col+1))
     }
 
     getNumChords(item) {

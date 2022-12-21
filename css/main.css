@@ -40,6 +40,9 @@ body {
 
 .field-locked.field-item .grid-item-big {
     display: block;
+    width: 130px; !important;
+    height: 130px;!important;
+
 }
 
 .field-locked.field-item .grid-small {
