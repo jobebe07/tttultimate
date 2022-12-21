@@ -38,6 +38,11 @@ body {
     height: 100%;
 }
 
+.grid-item {
+    width: 40px;
+    height: 40px;
+}
+
 .field-locked.field-item .grid-item-big {
     display: block;
     width: 130px; !important;
@@ -63,4 +68,17 @@ body {
 .default {
     background-image: url("https://jobebe07.github.io/tttultimate/assets/game/empty.png");
     background-size: 100%;
+}
+
+@media (max-width: 800px) {
+    .grid-item {
+        width: 30px;
+        height: 30px;
+    }
+    .field-locked.field-item .grid-item-big {
+        display: block;
+        width: 100px; !important;
+        height: 100px;!important;
+
+    }
 }
