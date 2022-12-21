@@ -103,7 +103,7 @@ export default class TicTacToeField {
         } else if (imageContainer.classList.contains("default")) {
             return Items.DEFAULT
         }
-        return undefined
+        return Items.DEFAULT
     }
     setItem(row, col, fieldrow, fieldcol, item) {
         let elem = this.grid[row][col].field[fieldrow][fieldcol]

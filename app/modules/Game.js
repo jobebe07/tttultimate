@@ -6,7 +6,7 @@ export default class Game {
         this.field = field
         this.current = Items.CROSS
         this.next = undefined
-
+        this.running = true
 
 
 
@@ -15,6 +15,8 @@ export default class Game {
 
 
     click(target) {
+        if(!this.running) return false
+
         if(!target) return false
 
         let result = this.field.getNumChords(target)
@@ -44,6 +46,14 @@ export default class Game {
             for(let elem of document.getElementsByClassName("current-grid")) {
                 elem.classList.remove("current-grid")
             }
+
+            if(this.checkWinnerGlobal() !== false) {
+                this.running = false
+                ClientAPI.setDisplayText(Items.DISPLAY_TEXT[this.checkWinnerGlobal()] + " has won!")
+                return false
+            }
+
+
             if(!this.field.isLocked(nextFieldChords.row, nextFieldChords.col)) {
                 this.field.gridElem.children.item(this.next-1).classList.add("current-grid")
             } else {
@@ -70,7 +80,14 @@ export default class Game {
     }
 
     checkWinnerGlobal() {
-
+        let array = []
+        for(let row = 0; row <= 2; row++) {
+            array[row] = []
+            for(let col = 0; col <= 2; col++) {
+                array[row][col] = this.field.getLockItem(row, col)
+            }
+        }
+        return this.checkField(array, Items.DEFAULT)
     }
 
     checkField(array, ex) {
