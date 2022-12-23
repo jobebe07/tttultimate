@@ -38,8 +38,16 @@ body {
     height: 100%;
 }
 
+.grid-item {
+    width: 40px;
+    height: 40px;
+}
+
 .field-locked.field-item .grid-item-big {
     display: block;
+    width: 130px; !important;
+    height: 130px;!important;
+
 }
 
 .field-locked.field-item .grid-small {
@@ -60,4 +68,21 @@ body {
 .default {
     background-image: url("https://jobebe07.github.io/tttultimate/assets/game/empty.png");
     background-size: 100%;
+}
+
+.current-grid {
+    box-shadow: 0px 0px 10px 3px #675cff;
+}
+
+@media (max-width: 800px) {
+    .grid-item {
+        width: 25px;
+        height: 25px;
+    }
+    .field-locked.field-item .grid-item-big {
+        display: block;
+        width: 80px; !important;
+        height: 80px;!important;
+
+    }
 }

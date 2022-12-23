@@ -1,4 +1,5 @@
 import Items from "./Items.js";
+import hasParent from "./utils.js";
 
 export default class TicTacToeField {
     constructor(gridMain) {
@@ -33,16 +34,16 @@ export default class TicTacToeField {
             let currentGrid = elem.children[0]
             let currentWinnerItem = elem.children[1]
 
-            let row = (current % 3)
-            let col = Math.floor(current / 3)
+            let row = this.numToChords(current+1).row
+            let col = this.numToChords(current+1).col
             
             let currentItems = [[], [], []]
 
             this.grids[row][col] = currentGrid
-            let gridCurrent = 0
+            let gridCurrent = 1
             for(let gridItem of currentGrid.children) {
-                let currentColumn = (gridCurrent % 3)
-                let currentRow = Math.floor(gridCurrent / 3)
+                let currentColumn = this.numToChords(gridCurrent).col
+                let currentRow = this.numToChords(gridCurrent).row
 
                 currentItems[currentRow][currentColumn] = gridItem
                 gridCurrent++
@@ -102,7 +103,7 @@ export default class TicTacToeField {
         } else if (imageContainer.classList.contains("default")) {
             return Items.DEFAULT
         }
-        return undefined
+        return Items.DEFAULT
     }
     setItem(row, col, fieldrow, fieldcol, item) {
         let elem = this.grid[row][col].field[fieldrow][fieldcol]
@@ -150,12 +151,27 @@ export default class TicTacToeField {
     }
 
     numToChords(num) {
+        num--
         let col = (num % 3)
         let row = Math.floor(num / 3)
         return {row:row, col:col,}
     }
 
     chordsToNum(row, col) {
-        return (row+1)*(col+1)
+        return ((row+1)*3) - (3-(col+1))
+    }
+
+    getNumChords(item) {
+        let fieldItem = hasParent(item, ".grid-item")
+        if(fieldItem) {
+            let field = hasParent(fieldItem, ".field-item")
+            if(fieldItem.hasAttribute("data-item-id") && field.hasAttribute("data-field-id")) {
+                let itemId = fieldItem.getAttribute("data-item-id")
+                let fieldId = field.getAttribute("data-field-id")
+
+                return {fieldId:fieldId, itemId:itemId,}
+            }
+        }
+        return false
     }
 }
