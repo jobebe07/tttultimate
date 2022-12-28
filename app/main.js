@@ -1,23 +1,17 @@
-import Items from "./modules/Items.js";
-import TicTacToeField from "./modules/TicTacToeField.js";
-import hasParent from "./modules/utils.js";
-import Game from "./modules/Game.js";
+let websocket = new WebSocket("ws://127.0.0.1:8080")
 
-let field
-let game
-
-window.addEventListener("load", () => {
-    field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
-    field.updateGrid()
-    window.field = field
-    window.hasParent = hasParent
-    game = new Game(field)
-    window.game = game
+websocket.addEventListener("open", () => {
+    console.log("Connected to serversocket")
 })
 
+websocket.addEventListener("message", (e) => {
+    console.log(e.data)
+})
 
-window.addEventListener("click", (e) => {
-    if(e.target.classList.contains("grid-item")) {
-        game.click(e.target)
-    }
+websocket.addEventListener("close", () => {
+    console.log("The websocket connection was closed")
+})
+
+websocket.addEventListener("error", (e) => {
+    console.log("An error occurred")
 })
