@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="087ec632-aadc-4661-95b4-c09cd8a4b856" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/alt/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/alt/modules/ClientAPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/alt/modules/Items.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/alt/modules/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/GameStatus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/MessageBuilder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/MessageType.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modules/ServerMessageType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/alt/modules/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modules/TicTacToeField.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/alt/modules/TicTacToeField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +44,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,6 +68,7 @@
       <workItem from="1671392166477" duration="2437000" />
       <workItem from="1671637804371" duration="8565000" />
       <workItem from="1672174541874" duration="3984000" />
+      <workItem from="1672223227893" duration="12731000" />
     </task>
     <servers />
   </component>

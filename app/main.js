@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
 })
 
 function init() {
-    websocket = new WebSocket("ws://195.90.212.21:8080")
+    websocket = new WebSocket("wss://ttt.belinked.chat:8080")
     field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
     field.updateGrid()
     window.field = field
