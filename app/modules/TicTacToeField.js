@@ -75,6 +75,11 @@ export default class TicTacToeField {
             }
         }
 
+        for(let row = 0; row <= 2; row++) {
+            for(let col = 0; col <= 2; col++) {
+                this.unlock(row, col)
+            }
+        }
         this.updateGrid()
     }
 
@@ -157,6 +162,11 @@ export default class TicTacToeField {
                 }
             }
         }
+
+        for(let elem of document.getElementsByClassName("current-grid")) {
+            elem.classList.remove("current-grid")
+        }
+        this.gridElem.classList.add("current-grid")
     }
 
     numToChords(num) {

@@ -79,7 +79,21 @@ body {
     box-shadow: 0px 0px 10px 3px #675cff;
 }
 
+.mobile {
+    display: none;
+}
+.desktop {
+    display: flex;
+}
+
 @media (max-width: 800px) {
+    .mobile {
+        display:flex;
+    }
+    .desktop {
+        display: none;
+    }
+
     .grid-item {
         width: 25px;
         height: 25px;

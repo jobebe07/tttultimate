@@ -32,7 +32,7 @@ function setLocalGame() {
 
     }
     field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
-    field.updateGrid()
+    field.resetField()
     window.field = field
     game = new LocalGame(field)
     hideOnlineElems()
@@ -47,7 +47,7 @@ function setOnlineGame() {
     }
     websocket = new WebSocket("ws://ttt.belinkedmc.de:8080")
     field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
-    field.updateGrid()
+    field.resetField()
     window.field = field
     game = new OnlineGame(field, websocket)
     showOnlineElems()
