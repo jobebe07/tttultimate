@@ -10,7 +10,12 @@ export default class TicTacToeField {
 
         this.gridElem = gridMain;
 
-        this.grid = [[
+        this.resetField()
+    }
+
+    resetField() {
+        this.grid = [
+            [
                 {container:undefined, field:undefined, winnerItem:undefined,},
                 {container:undefined, field:undefined, winnerItem:undefined,},
                 {container:undefined, field:undefined, winnerItem:undefined,}
@@ -28,7 +33,7 @@ export default class TicTacToeField {
         ]
         this.grids = [[], [], []]
         let current = 0
-        for(let elem of gridMain.children) {
+        for(let elem of this.gridElem.children) {
             // elem of gridmain --> fielditem[0] = gridsmall
             let currentFieldItem = elem
             let currentGrid = elem.children[0]
@@ -36,7 +41,7 @@ export default class TicTacToeField {
 
             let row = this.numToChords(current+1).row
             let col = this.numToChords(current+1).col
-            
+
             let currentItems = [[], [], []]
 
             this.grids[row][col] = currentGrid
@@ -57,7 +62,6 @@ export default class TicTacToeField {
         }
 
         this.field = []
-
         for(let i = 0; i <= 2; i++) {
             this.field[i] = []
             for(let a = 0; a <= 2; a++) {
@@ -70,6 +74,8 @@ export default class TicTacToeField {
                 }
             }
         }
+
+        this.updateGrid()
     }
 
     lock(row, col) {
@@ -84,12 +90,15 @@ export default class TicTacToeField {
     setLockItem(row, col, item) {
         let container = this.grid[row][col].container
         let imageContainer = container.children[1]
-        if(item == Items.CIRCLE) {
+
+        imageContainer.classList.remove("circle", "cross", "default")
+
+        if(item === Items.CIRCLE) {
             imageContainer.classList.add("circle")
-        } else if (item == Items.CROSS) {
+        } else if (item === Items.CROSS) {
             imageContainer.classList.add("cross")
-        } else if(item == Items.DEFAULT) {
-            imageContainer.classList.add("cross")
+        } else if(item === Items.DEFAULT) {
+            imageContainer.classList.add("default")
         }
     }
 

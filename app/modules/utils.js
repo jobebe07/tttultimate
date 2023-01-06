@@ -1,9 +1,10 @@
 function hasParent(elem, exp) {
     let current = elem
+    if(current.tagName === "HTML") return false
 
-    while(current != document.body) {
+    while(current !== document.body) {
         if (exp.startsWith('#')) {
-            if(current.id == exp.substr(1)) return current
+            if(current.id === exp.substring(1)) return current
         } else if (exp.startsWith('.')) {
             if(current.classList.contains(exp.substr(1))) return current
         } else if (exp.startsWith('[')) {
@@ -11,7 +12,7 @@ function hasParent(elem, exp) {
             if(string.contains("=")) {
                 let attrName = string.split("=")[0]
                 let value = string.split("=")[1]
-                if(current.getAttribute(attrName) == value) return current
+                if(current.getAttribute(attrName) === value) return current
             } else {
                 if(current.hasAttribute(string)) return current
             }

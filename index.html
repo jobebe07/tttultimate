@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="./app/main.js"></script>
+    <script type="module" src="app/main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="./css/colors.css">
@@ -20,141 +20,161 @@
                     <span class="sz-40">TicTacToe Ultimate</span>
                 </div>
 
-                <div class="flex-justify-center">
-                    <span id="status">Waiting...</span>
-                </div>
-
-                <div class="flex-justify-center w-100p">
-                    <div class="grid-main current-grid">
-                        <div class="field-item" data-field-id="1">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
-                        <div class="field-item" data-field-id="2">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
-                        <div class="field-item" data-field-id="3">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
-                        <div class="field-item" data-field-id="4">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
-                        <div class="field-item" data-field-id="5">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
-                        <div class="field-item" data-field-id="6">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
-                        <div class="field-item" data-field-id="7">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
-                        <div class="field-item" data-field-id="8">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
-                        <div class="field-item" data-field-id="9">
-                            <div class="grid-small">
-                                <div class="grid-item" data-item-id="1"></div>
-                                <div class="grid-item" data-item-id="2"></div>
-                                <div class="grid-item" data-item-id="3"></div>
-                                <div class="grid-item" data-item-id="4"></div>
-                                <div class="grid-item" data-item-id="5"></div>
-                                <div class="grid-item" data-item-id="6"></div>
-                                <div class="grid-item" data-item-id="7"></div>
-                                <div class="grid-item" data-item-id="8"></div>
-                                <div class="grid-item" data-item-id="9"></div>
-                            </div>
-                            <div class="grid-item-big"></div>
-                        </div>
+                <div class="pregame">
+                    <div class="flex-justify-center gap-10">
+                        <span class="br-20 hov p-15 startLocalGame">
+                            Local
+                        </span>
+                        <span class="br-20 hov p-15 startOnlineGame">
+                            Multiplayer
+                        </span>
                     </div>
                 </div>
 
+                <div class="ingame">
+                    <div class="flex-col w-100p gap-20">
+                        <div class="flex-justify-center">
+                            <span id="status">Waiting...</span>
+                        </div>
+
+                        <div class="flex-justify-center w-100p">
+                            <div class="grid-main current-grid">
+                                <div class="field-item" data-field-id="1">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                                <div class="field-item" data-field-id="2">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                                <div class="field-item" data-field-id="3">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                                <div class="field-item" data-field-id="4">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                                <div class="field-item" data-field-id="5">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                                <div class="field-item" data-field-id="6">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                                <div class="field-item" data-field-id="7">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                                <div class="field-item" data-field-id="8">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                                <div class="field-item" data-field-id="9">
+                                    <div class="grid-small">
+                                        <div class="grid-item" data-item-id="1"></div>
+                                        <div class="grid-item" data-item-id="2"></div>
+                                        <div class="grid-item" data-item-id="3"></div>
+                                        <div class="grid-item" data-item-id="4"></div>
+                                        <div class="grid-item" data-item-id="5"></div>
+                                        <div class="grid-item" data-item-id="6"></div>
+                                        <div class="grid-item" data-item-id="7"></div>
+                                        <div class="grid-item" data-item-id="8"></div>
+                                        <div class="grid-item" data-item-id="9"></div>
+                                    </div>
+                                    <div class="grid-item-big"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="w-max flex-justify-center gap-10">
+                            <button type="button" id="joinGame" class="button online">Join Game</button>
+                            <button type="button" id="back" class="button">Back</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
