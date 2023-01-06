@@ -1,13 +1,11 @@
 import Items from "./Items.js";
 import ClientAPI from "./ClientAPI.js";
+import Game from "./Game.js";
 
-export default class Game {
+export default class LocalGame extends Game {
     constructor(field) {
-        this.field = field
+        super(field)
         this.current = Items.CROSS
-        this.next = undefined
-        this.running = true
-
 
 
         this.updateText()

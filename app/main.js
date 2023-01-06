@@ -2,86 +2,110 @@ import ServerMessageType from "./modules/ServerMessageType.js";
 import GameStatus from "./modules/GameStatus.js";
 import Items from "./modules/Items.js";
 import TicTacToeField from "./modules/TicTacToeField.js";
-import Game from "./modules/Game.js";
+import OnlineGame from "./modules/OnlineGame.js";
 import ClientAPI from "./modules/ClientAPI.js";
 import MessageBuilder from "./modules/MessageBuilder.js";
 import MessageType from "./modules/MessageType.js";
+import LocalGame from "./modules/LocalGame.js";
+import hasParent from "./modules/utils.js";
 
 let websocket
 let field
 let game
+let joinBtn
+let backBtn
 
 window.addEventListener("load", () => {
+    joinBtn = document.getElementById("joinGame")
+    backBtn = document.getElementById("back")
+    hideOnlineElems()
+    setPregame()
     init()
-
-    window.addEventListener("click", (e) => {
-        if(e.target.classList.contains("grid-item")) {
-            game.click(e.target)
-        }
-    })
-
-    document.getElementById("joinGame").addEventListener("click", () => {
-        let msg = new MessageBuilder(MessageType.JOIN).build()
-        websocket.send(JSON.stringify(msg))
-    })
+    window.setLocalGame = setLocalGame
+    window.setOnlineGame = setOnlineGame
 })
 
-function init() {
+function setLocalGame() {
+    try {
+        game.quit()
+    } catch (e) {
+
+    }
+    field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
+    field.updateGrid()
+    window.field = field
+    game = new LocalGame(field)
+    hideOnlineElems()
+    setIngame()
+}
+
+function setOnlineGame() {
+    try {
+        game.quit()
+    } catch (e) {
+
+    }
     websocket = new WebSocket("ws://ttt.belinkedmc.de:8080")
     field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
     field.updateGrid()
     window.field = field
-    game = new Game(field, websocket)
+    game = new OnlineGame(field, websocket)
+    showOnlineElems()
+    setIngame()
+}
 
-    websocket.addEventListener("open", () => {
-        console.log("Connected to serversocket")
-    })
-
-    websocket.addEventListener("message", (e) => {
-        let data = JSON.parse(e.data)
-        if(data.type === ServerMessageType.STATUS_CHANGE) {
-            console.log("Status change to status " + data.content.status)
-            if(data.content.status === GameStatus.INGAME) {
-                console.log(`You are ingame now as ${Items.DISPLAY_TEXT[data.content.data.me]}`)
-                game.me = data.content.data.me
-                game.current = data.content.data.current
-            }
-            if(data.content.status === GameStatus.END) {
-                if(data.content.data !== undefined) {
-                    game.winner = data.content.data.winner
-                }
-            }
-            game.setStatus(data.content.status)
-        }
-        if(data.type === ServerMessageType.FIELD_UPDATE) {
-            game.field.field = data.content.field
-            game.field.updateGrid()
-            game.setCurrent(data.content.current)
-            game.setNext(data.content.next)
-
-            // TODO lock grids with data.content.locked
-
-            for(let row = 0; row <= 2; row++) {
-                for(let col = 0; col <= 2; col++) {
-                    if(data.content.locked[row][col].locked) {
-                        game.field.lock(row, col)
-                        game.field.setLockItem(row, col, data.content.locked[row][col].lockItem)
-                    } else {
-                        game.field.unlock(row, col)
-                    }
-                }
-            }
-
-            game.updateText()
+function init() {
+    window.addEventListener("click", (e) => {
+        if(e.target.classList.contains("grid-item") && game !== undefined) {
+            game.click(e.target)
+        } else if(hasParent(e.target, ".startLocalGame")) {
+            setLocalGame()
+        } else if(hasParent(e.target, ".startOnlineGame")) {
+            setOnlineGame()
         }
     })
 
-    websocket.addEventListener("close", () => {
-        console.log("The websocket connection was closed")
-        ClientAPI.setDisplayText("Lost connection, please reload")
+    joinBtn.addEventListener("click", () => {
+        let msg = new MessageBuilder(MessageType.JOIN).build()
+        websocket.send(JSON.stringify(msg))
     })
 
-    websocket.addEventListener("error", (e) => {
-        console.log("An error occurred")
+    backBtn.addEventListener("click", () => {
+        setPregame()
     })
+}
+
+function hideOnlineElems() {
+    for(let elem of document.getElementsByClassName("online")) {
+        elem.style.display = "none"
+    }
+}
+
+function showOnlineElems() {
+    for(let elem of document.getElementsByClassName("online")) {
+        elem.style.display = "block"
+    }
+}
+
+function setIngame() {
+    for(let elem of document.getElementsByClassName("ingame")) {
+        elem.style.display = "block"
+    }
+    for(let elem of document.getElementsByClassName("pregame")) {
+        elem.style.display = "none"
+    }
+}
+
+function setPregame() {
+    try {
+        game.quit()
+    } catch (e) {
+
+    }
+    for(let elem of document.getElementsByClassName("ingame")) {
+        elem.style.display = "none"
+    }
+    for(let elem of document.getElementsByClassName("pregame")) {
+        elem.style.display = "block"
+    }
 }

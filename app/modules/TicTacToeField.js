@@ -10,7 +10,12 @@ export default class TicTacToeField {
 
         this.gridElem = gridMain;
 
-        this.grid = [[
+        this.resetField()
+    }
+
+    resetField() {
+        this.grid = [
+            [
                 {container:undefined, field:undefined, winnerItem:undefined,},
                 {container:undefined, field:undefined, winnerItem:undefined,},
                 {container:undefined, field:undefined, winnerItem:undefined,}
@@ -28,7 +33,7 @@ export default class TicTacToeField {
         ]
         this.grids = [[], [], []]
         let current = 0
-        for(let elem of gridMain.children) {
+        for(let elem of this.gridElem.children) {
             // elem of gridmain --> fielditem[0] = gridsmall
             let currentFieldItem = elem
             let currentGrid = elem.children[0]
@@ -36,7 +41,7 @@ export default class TicTacToeField {
 
             let row = this.numToChords(current+1).row
             let col = this.numToChords(current+1).col
-            
+
             let currentItems = [[], [], []]
 
             this.grids[row][col] = currentGrid
@@ -57,11 +62,6 @@ export default class TicTacToeField {
         }
 
         this.field = []
-
-        this.resetField()
-    }
-
-    resetField() {
         for(let i = 0; i <= 2; i++) {
             this.field[i] = []
             for(let a = 0; a <= 2; a++) {

@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="087ec632-aadc-4661-95b4-c09cd8a4b856" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/modules/OnlineGame.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/ui/emoji.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/alt/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/alt/modules/ClientAPI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/alt/modules/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/LocalGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/alt/modules/Items.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/alt/modules/TicTacToeField.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/alt/modules/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/Game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/modules/TicTacToeField.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/TicTacToeField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/utils.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/utils.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,26 +47,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/johannes/Dokumente/tttultimate/app/modules&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/johannes/Dokumente/tttultimate/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/app/modules" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/modules" />
+      <recent name="$PROJECT_DIR$/assets/ui" />
+      <recent name="$PROJECT_DIR$/assets/game" />
       <recent name="$PROJECT_DIR$/app/alt" />
     </key>
   </component>
@@ -70,6 +87,8 @@
       <workItem from="1671637804371" duration="8565000" />
       <workItem from="1672174541874" duration="3984000" />
       <workItem from="1672223227893" duration="12731000" />
+      <workItem from="1673034834417" duration="234000" />
+      <workItem from="1673035925049" duration="6705000" />
     </task>
     <servers />
   </component>
