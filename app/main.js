@@ -45,7 +45,7 @@ function setOnlineGame() {
     } catch (e) {
 
     }
-    websocket = new WebSocket("wss://ttt.belinked.chat:8080")
+    websocket = new WebSocket("wss://ttt.belinked.chat:443")
     field = new TicTacToeField(document.getElementsByClassName("grid-main")[0])
     field.resetField()
     window.field = field
